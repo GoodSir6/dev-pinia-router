@@ -27,7 +27,10 @@ function visualizar(id) {
         <td>{{ product.id }}</td>
         <td>{{ product.name }}</td>
         <td>{{ product.price }}</td>
-        <td><button @click="visualizar(product.id)">ver</button></td>
+        <td>
+          <button @click="visualizar(product.id)">ver</button>
+          <button @click="productStore.deleteProductById(product.id)">excluir</button>
+        </td>
       </tr>
     </tbody>
   </table>
